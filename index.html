@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en" class="h-full motion-safe:scroll-smooth" data-theme="dark">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <meta name="generator" content="Astro v2.8.0">
+
+    <title>Inntri Labs - Igniting Innovation, Empowering Transformation</title>
+    <meta name="description" content="A hub of innovation where ideas take flight and transformative solutions come to life. Discover our cutting-edge products and services, designed to empower your growth and elevate your success.">
+
+    <!-- social media -->
+    <meta property="og:title" content="Inntri Labs">
+    <meta property="og:type" content="website">
+    <meta property="og:description" content="A hub of innovation where ideas take flight and transformative solutions come to life. Discover our cutting-edge products and services, designed to empower your growth and elevate your success.">
+    <meta property="og:image" content="https://madurapa.github.io/social.png">
+    <meta property="og:url" content="https://madurapa.github.io/inntrilabs">
+    <meta name="twitter:card" content="Igniting Innovation, Empowering Transformation">
+
+    <!-- initialize theme -->
+    <script>
+      const themeSaved = localStorage.getItem("theme");
+
+      if (themeSaved) {
+        document.documentElement.dataset.theme = themeSaved;
+      } else {
+        const prefersDark = window.matchMedia(
+          "(prefers-color-scheme: dark)"
+        ).matches;
+        document.documentElement.dataset.theme = prefersDark ? "dark" : "light";
+      }
+
+      window
+        .matchMedia("(prefers-color-scheme: dark)")
+        .addEventListener("change", (event) => {
+          if (!localStorage.getItem("theme")) {
+            document.documentElement.dataset.theme = event.matches
+              ? "dark"
+              : "light";
+          }
+        });
+    </script>
+  <link rel="stylesheet" href="astro/index.a850441d.css" /><script type="module" src="astro/hoisted.580bccfd.js"></script></head>
+  <body class="h-full overflow-x-hidden bg-default text-default text-base selection:bg-secondary selection:text-white">
+    <header id="page-header" class="absolute top-0 z-20 flex w-full items-center justify-between border-b border-transparent px-8 py-6 text-white astro-HPNW4VWY">
+  <a class="hover:!text-current astro-HPNW4VWY" href="#" title="Inntri Labs">
+    <h1 class="sr-only astro-HPNW4VWY">Inntri Labs</h1>
+    <svg fill="none" viewBox="0 0 393.4 172.2" class="h-6 sm:h-12 astro-HPNW4VWY" astro-icon="lo"><path fill="currentColor" d="M216.4 169.3v-15.9h4.6l3.6 5.7c1.1 1.8 2.1 3.8 2.9 5.7h.1c-.3-2.2-.3-4.2-.3-6.4v-5h3.5v15.9h-4.1l-3.7-6.1c-1.1-1.8-2.2-3.9-3.1-5.9h-.1c.1 2.3.1 4.4.1 6.8v5.2h-3.5ZM245.1 169.3v-2.2l2.1-1.7c3.8-3.2 5.4-4.7 5.5-6.4 0-1.2-.7-2.3-2.7-2.3-1.4 0-2.7.7-3.6 1.4l-1.2-2.6c1.3-1 3.3-1.8 5.5-1.8 3.5 0 5.7 2 5.7 4.9 0 2.5-1.9 4.4-4.2 6.4l-1.6 1.2h6.2v3h-11.7v.1ZM271.4 169.3v-15.9h4.6l3.6 5.7c1.1 1.8 2.1 3.8 2.9 5.7h.1c-.3-2.2-.3-4.2-.3-6.4v-5h3.5v15.9h-4.1l-3.7-6.1c-1.1-1.8-2.2-3.9-3.1-5.9h-.1c.1 2.3.1 4.4.1 6.8v5.2h-3.5ZM300.6 153.4h3.7v12.7h7.1v3.1h-10.8v-15.8ZM329.5 165.1l-1.3 4.2h-3.9l5.3-15.9h5l5.6 15.9h-4.1l-1.4-4.2h-5.2Zm4.6-2.8-1.1-3.4c-.3-.9-.6-2-.9-2.9-.3.9-.5 1.9-.8 2.9l-1.1 3.4h3.9ZM354.1 153.7c.9-.2 3-.4 5-.4 2.4 0 3.7.2 4.9.8 1.2.5 2.1 1.6 2.1 3.2 0 1.4-.8 2.7-2.7 3.3v.1c1.8.5 3.3 1.8 3.3 3.9 0 1.5-.7 2.7-1.8 3.4-1.2.9-3.3 1.4-6.6 1.4-2 0-3.4-.1-4.2-.3v-15.4Zm3.7 6h1.3c2.2 0 3.2-.7 3.2-1.9s-1-1.8-2.8-1.8c-.9 0-1.4.1-1.8.1v3.6h.1Zm0 7c.4.1.9.1 1.6.1 1.8 0 3.3-.6 3.3-2.3 0-1.6-1.5-2.2-3.5-2.2h-1.4v4.4ZM381.2 165.4c1.1.6 2.7 1.1 4.4 1.1 1.7 0 2.6-.7 2.6-1.7 0-.9-.8-1.5-2.9-2.1-2.8-.8-4.8-2.2-4.8-4.8 0-2.8 2.5-4.8 6.3-4.8 2.1 0 3.5.4 4.6.9l-.9 2.9c-.7-.3-2-.8-3.7-.8-1.6 0-2.4.7-2.4 1.5 0 1 1 1.4 3.2 2.1 3 1 4.5 2.4 4.5 4.8 0 2.6-2 5-6.8 5-2 0-4-.5-5-1.1l.9-3ZM23.8 131.1H9.3V7h14.5v124.1ZM128.1 131.1h-14.2V80.6c0-18.8-6.9-28.2-20.6-28.2-7.1 0-13 2.7-17.6 8-4.6 5.3-7 12.1-7 20.2v50.5H54.6V42.5h14.2v14.7h.3C75.8 46 85.5 40.4 98.2 40.4c9.7 0 17.1 3.1 22.2 9.4 5.1 6.3 7.7 15.3 7.7 27.1v54.2ZM228.4 131.1h-14.2V80.6c0-18.8-6.9-28.2-20.6-28.2-7.1 0-13 2.7-17.6 8-4.6 5.3-7 12.1-7 20.2v50.5h-14.2V42.5H169v14.7h.3c6.7-11.2 16.4-16.8 29.1-16.8 9.7 0 17.1 3.1 22.2 9.4 5.1 6.3 7.7 15.3 7.7 27.1v54.2h.1ZM296.3 130.2c-3.3 1.8-7.8 2.8-13.2 2.8-15.5 0-23.3-8.7-23.3-26V54.6h-15.2V42.5h15.2V20.8l14.2-4.6v26.2h22.3v12.2H274v49.9c0 5.9 1 10.2 3 12.7s5.4 3.8 10 3.8c3.6 0 6.7-1 9.3-2.9v12.1ZM384.1 20c-2.5 0-4.7-.9-6.5-2.6-1.8-1.7-2.7-3.9-2.7-6.6 0-2.7.9-4.9 2.7-6.6 1.8-1.8 4-2.6 6.5-2.6 2.6 0 4.8.9 6.6 2.6 1.8 1.8 2.7 4 2.7 6.6 0 2.5-.9 4.7-2.7 6.5-1.8 1.8-4 2.7-6.6 2.7Zm6.9 111.1h-14.2V42.5H391v88.6ZM329.4 131.1v-29h-.1V42.5h-14.1v88.6z"/><path fill="currentColor" d="M315.2 42.5h14.1v88.9h-14.1z"/><path fill="#F18724" d="M92.8 140.2 156 169l-41.8 3.2z"/><path fill="#F5A321" d="m114.2 172.2 77.9-29.1-25.9 28.9z"/><path fill="currentColor" d="M0 14.5V0h32.2v14.5H0ZM0 137.1v-14.5h32.2v14.5H0Z"/><path fill="#3EAB4C" d="M360.3 49.7c-4.2 17-26.9 25.7-26.9 25.7l-.6.1h.2s24.6.9 31.4-22c3.3-11.8.4-23.6.4-23.6-9.8 2.1-17.7 6.3-24.6 17.8-7 11.5-3.9 20.8-3.9 20.8 18.8-8.8 18.8-20 18.8-20-8 11.8-16.2 13-16.2 13 4.1-24.4 22.6-26.7 22.6-26.7.3 5.4-.1 10.1-1 14.1 0 .3-.1.6-.2.8Z"/></svg>
+  </a>
+  <div class="astro-HPNW4VWY">
+    <div class="flex items-center gap-6 astro-HPNW4VWY">
+      <nav class="hidden sm:block astro-HPNW4VWY">
+        <ul class="flex items-center gap-6 astro-HPNW4VWY">
+          <li class="astro-HPNW4VWY">
+                <a class="font-semibold astro-HPNW4VWY" href="#cloud-erp" title="Cloud ERP">
+                  Cloud ERP
+                </a>
+              </li><li class="astro-HPNW4VWY">
+                <a class="font-semibold astro-HPNW4VWY" href="#features" title="Features">
+                  Features
+                </a>
+              </li><li class="astro-HPNW4VWY">
+                <a class="font-semibold astro-HPNW4VWY" href="#ecosystem" title="Ecosystem">
+                  Ecosystem
+                </a>
+              </li><li class="astro-HPNW4VWY">
+                <a class="font-semibold astro-HPNW4VWY" href="#contact" title="Contact Us">
+                  Contact Us
+                </a>
+              </li>
+        </ul>
+      </nav>
+      <button id="open-nav-button" type="button" class="btn sm:hidden astro-HPNW4VWY" aria-label="Navigation">
+        <svg viewBox="0 0 24 24" class="h-8 astro-HPNW4VWY" astro-icon="mdi:menu"><path fill="currentColor" d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+      </button>
+      <!--
+  negative margin is sum of button width (8) and gap size of flex parent (6)
+  TODO don't hardcode these values
+--><button id="theme-switcher" type="button" name="Theme Switcher" class="-origin-[right_center] transition-all duration-500">
+  <div id="icon-theme-light">
+    <svg viewBox="0 0 512 512" class="h-8" astro-icon="theme/light"><defs><linearGradient id="astroicon:theme/lighta" x1="149.99" x2="234.01" y1="119.24" y2="264.76" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="currentColor"/><stop offset=".45" stop-color="currentColor"/><stop offset="1" stop-color="currentColor"/></linearGradient><symbol id="astroicon:theme/lightb" viewBox="0 0 384 384"><circle cx="192" cy="192" r="84" fill="url(#astroicon:theme/lighta)" stroke="currentColor" stroke-miterlimit="10" stroke-width="6"/><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="24" d="M192 61.66V12m0 360v-49.66m92.17-222.51 35.11-35.11M64.72 319.28l35.11-35.11m0-184.34L64.72 64.72m254.56 254.56-35.11-35.11M61.66 192H12m360 0h-49.66"><animateTransform additive="sum" attributeName="transform" dur="6s" repeatCount="indefinite" type="rotate" values="0 192 192; 45 192 192"/></path></symbol></defs><use xlink:href="#astroicon:theme/lightb" width="384" height="384" transform="translate(64 64)"/></svg>
+    <span class="sr-only">Use light theme</span>
+  </div>
+  <div id="icon-theme-dark" class="hidden">
+    <svg viewBox="0 0 512 512" class="h-8" astro-icon="theme/dark"><defs><linearGradient id="astroicon:theme/darkb" x1="54.33" x2="187.18" y1="29.03" y2="259.13" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="currentColor"/><stop offset=".45" stop-color="currentColor"/><stop offset="1" stop-color="currentColor"/></linearGradient><linearGradient id="astroicon:theme/darka" x1="294" x2="330" y1="112.82" y2="175.18" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="currentColor"/><stop offset=".45" stop-color="currentColor"/><stop offset="1" stop-color="currentColor"/></linearGradient><linearGradient xlink:href="#astroicon:theme/darka" id="astroicon:theme/darkc" x1="295.52" x2="316.48" y1="185.86" y2="222.14"/><linearGradient xlink:href="#astroicon:theme/darka" id="astroicon:theme/darkd" x1="356.29" x2="387.71" y1="194.78" y2="249.22"/><symbol id="astroicon:theme/darke" overflow="visible" viewBox="0 0 270 270"><path fill="url(#astroicon:theme/darkb)" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="6" d="M252.25 168.63C178.13 168.63 118 109.35 118 36.21A130.48 130.48 0 0 1 122.47 3C55.29 10.25 3 66.37 3 134.58 3 207.71 63.09 267 137.21 267 199.69 267 252 224.82 267 167.79a135.56 135.56 0 0 1-14.75.84Z"><animateTransform additive="sum" attributeName="transform" dur="6s" repeatCount="indefinite" type="rotate" values="-15 135 135; 9 135 135; -15 135 135"/></path></symbol></defs><path fill="url(#astroicon:theme/darka)" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m282.83 162.84 24.93-6.42a1.78 1.78 0 0 1 1.71.46l18.37 18a1.8 1.8 0 0 0 3-1.73l-6.42-24.93a1.78 1.78 0 0 1 .46-1.71l18-18.37a1.8 1.8 0 0 0-1.73-3l-24.93 6.42a1.78 1.78 0 0 1-1.71-.46l-18.37-18a1.8 1.8 0 0 0-3 1.73l6.42 24.93a1.78 1.78 0 0 1-.46 1.71l-18 18.37a1.8 1.8 0 0 0 1.73 3Z"><animateTransform additive="sum" attributeName="transform" calcMode="spline" dur="6s" keySplines=".42, 0, .58, 1; .42, 0, .58, 1" repeatCount="indefinite" type="rotate" values="-15 312 144; 15 312 144; -15 312 144"/><animate attributeName="opacity" dur="6s" values="1; .75; 1; .75; 1; .75; 1"/></path><path fill="url(#astroicon:theme/darkc)" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m285.4 193.44 12 12.25a1.19 1.19 0 0 1 .3 1.14l-4.28 16.62a1.2 1.2 0 0 0 2 1.15l12.25-12a1.19 1.19 0 0 1 1.14-.3l16.62 4.28a1.2 1.2 0 0 0 1.15-2l-12-12.25a1.19 1.19 0 0 1-.3-1.14l4.28-16.62a1.2 1.2 0 0 0-2-1.15l-12.25 12a1.19 1.19 0 0 1-1.14.3l-16.62-4.28a1.2 1.2 0 0 0-1.15 2Z"><animateTransform additive="sum" attributeName="transform" begin="-.33s" calcMode="spline" dur="6s" keySplines=".42, 0, .58, 1; .42, 0, .58, 1" repeatCount="indefinite" type="rotate" values="-15 306 204; 15 306 204; -15 306 204"/><animate attributeName="opacity" begin="-.33s" dur="6s" values="1; .75; 1; .75; 1; .75; 1"/></path><path fill="url(#astroicon:theme/darkd)" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m337.32 223.73 24.8 6.9a1.83 1.83 0 0 1 1.25 1.25l6.9 24.8a1.79 1.79 0 0 0 3.46 0l6.9-24.8a1.83 1.83 0 0 1 1.25-1.25l24.8-6.9a1.79 1.79 0 0 0 0-3.46l-24.8-6.9a1.83 1.83 0 0 1-1.25-1.25l-6.9-24.8a1.79 1.79 0 0 0-3.46 0l-6.9 24.8a1.83 1.83 0 0 1-1.25 1.25l-24.8 6.9a1.79 1.79 0 0 0 0 3.46Z"><animateTransform additive="sum" attributeName="transform" begin="-.67s" calcMode="spline" dur="6s" keySplines=".42, 0, .58, 1; .42, 0, .58, 1" repeatCount="indefinite" type="rotate" values="-15 372 222; 15 372 222; -15 372 222"/><animate attributeName="opacity" begin="-.67s" dur="6s" values="1; .75; 1; .75; 1; .75; 1"/></path><use xlink:href="#astroicon:theme/darke" width="270" height="270" transform="translate(121 121)"/></svg>
+    <span class="sr-only">Use dark theme</span>
+  </div>
+</button>
+    </div>
+    <div id="menu-modal" class="modal hidden astro-HPNW4VWY" aria-hidden="true">
+      <div class="fixed inset-0 bg-default px-8 py-4 text-default astro-HPNW4VWY">
+        <div class="space-y-20 astro-HPNW4VWY" role="dialog" aria-modal="true">
+          <header class="text-right astro-HPNW4VWY">
+            <button id="close-nav-button" type="button" class="btn astro-HPNW4VWY" aria-label="Close navigation">
+              <svg viewBox="0 0 24 24" class="h-8 astro-HPNW4VWY" astro-icon="mdi:close"><path fill="currentColor" d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+            </button>
+          </header>
+          <div class="flex justify-center astro-HPNW4VWY">
+            <svg fill="none" viewBox="0 0 393.4 172.2" class="h-16 astro-HPNW4VWY" astro-icon="lo"><path fill="currentColor" d="M216.4 169.3v-15.9h4.6l3.6 5.7c1.1 1.8 2.1 3.8 2.9 5.7h.1c-.3-2.2-.3-4.2-.3-6.4v-5h3.5v15.9h-4.1l-3.7-6.1c-1.1-1.8-2.2-3.9-3.1-5.9h-.1c.1 2.3.1 4.4.1 6.8v5.2h-3.5ZM245.1 169.3v-2.2l2.1-1.7c3.8-3.2 5.4-4.7 5.5-6.4 0-1.2-.7-2.3-2.7-2.3-1.4 0-2.7.7-3.6 1.4l-1.2-2.6c1.3-1 3.3-1.8 5.5-1.8 3.5 0 5.7 2 5.7 4.9 0 2.5-1.9 4.4-4.2 6.4l-1.6 1.2h6.2v3h-11.7v.1ZM271.4 169.3v-15.9h4.6l3.6 5.7c1.1 1.8 2.1 3.8 2.9 5.7h.1c-.3-2.2-.3-4.2-.3-6.4v-5h3.5v15.9h-4.1l-3.7-6.1c-1.1-1.8-2.2-3.9-3.1-5.9h-.1c.1 2.3.1 4.4.1 6.8v5.2h-3.5ZM300.6 153.4h3.7v12.7h7.1v3.1h-10.8v-15.8ZM329.5 165.1l-1.3 4.2h-3.9l5.3-15.9h5l5.6 15.9h-4.1l-1.4-4.2h-5.2Zm4.6-2.8-1.1-3.4c-.3-.9-.6-2-.9-2.9-.3.9-.5 1.9-.8 2.9l-1.1 3.4h3.9ZM354.1 153.7c.9-.2 3-.4 5-.4 2.4 0 3.7.2 4.9.8 1.2.5 2.1 1.6 2.1 3.2 0 1.4-.8 2.7-2.7 3.3v.1c1.8.5 3.3 1.8 3.3 3.9 0 1.5-.7 2.7-1.8 3.4-1.2.9-3.3 1.4-6.6 1.4-2 0-3.4-.1-4.2-.3v-15.4Zm3.7 6h1.3c2.2 0 3.2-.7 3.2-1.9s-1-1.8-2.8-1.8c-.9 0-1.4.1-1.8.1v3.6h.1Zm0 7c.4.1.9.1 1.6.1 1.8 0 3.3-.6 3.3-2.3 0-1.6-1.5-2.2-3.5-2.2h-1.4v4.4ZM381.2 165.4c1.1.6 2.7 1.1 4.4 1.1 1.7 0 2.6-.7 2.6-1.7 0-.9-.8-1.5-2.9-2.1-2.8-.8-4.8-2.2-4.8-4.8 0-2.8 2.5-4.8 6.3-4.8 2.1 0 3.5.4 4.6.9l-.9 2.9c-.7-.3-2-.8-3.7-.8-1.6 0-2.4.7-2.4 1.5 0 1 1 1.4 3.2 2.1 3 1 4.5 2.4 4.5 4.8 0 2.6-2 5-6.8 5-2 0-4-.5-5-1.1l.9-3ZM23.8 131.1H9.3V7h14.5v124.1ZM128.1 131.1h-14.2V80.6c0-18.8-6.9-28.2-20.6-28.2-7.1 0-13 2.7-17.6 8-4.6 5.3-7 12.1-7 20.2v50.5H54.6V42.5h14.2v14.7h.3C75.8 46 85.5 40.4 98.2 40.4c9.7 0 17.1 3.1 22.2 9.4 5.1 6.3 7.7 15.3 7.7 27.1v54.2ZM228.4 131.1h-14.2V80.6c0-18.8-6.9-28.2-20.6-28.2-7.1 0-13 2.7-17.6 8-4.6 5.3-7 12.1-7 20.2v50.5h-14.2V42.5H169v14.7h.3c6.7-11.2 16.4-16.8 29.1-16.8 9.7 0 17.1 3.1 22.2 9.4 5.1 6.3 7.7 15.3 7.7 27.1v54.2h.1ZM296.3 130.2c-3.3 1.8-7.8 2.8-13.2 2.8-15.5 0-23.3-8.7-23.3-26V54.6h-15.2V42.5h15.2V20.8l14.2-4.6v26.2h22.3v12.2H274v49.9c0 5.9 1 10.2 3 12.7s5.4 3.8 10 3.8c3.6 0 6.7-1 9.3-2.9v12.1ZM384.1 20c-2.5 0-4.7-.9-6.5-2.6-1.8-1.7-2.7-3.9-2.7-6.6 0-2.7.9-4.9 2.7-6.6 1.8-1.8 4-2.6 6.5-2.6 2.6 0 4.8.9 6.6 2.6 1.8 1.8 2.7 4 2.7 6.6 0 2.5-.9 4.7-2.7 6.5-1.8 1.8-4 2.7-6.6 2.7Zm6.9 111.1h-14.2V42.5H391v88.6ZM329.4 131.1v-29h-.1V42.5h-14.1v88.6z"/><path fill="currentColor" d="M315.2 42.5h14.1v88.9h-14.1z"/><path fill="#F18724" d="M92.8 140.2 156 169l-41.8 3.2z"/><path fill="#F5A321" d="m114.2 172.2 77.9-29.1-25.9 28.9z"/><path fill="currentColor" d="M0 14.5V0h32.2v14.5H0ZM0 137.1v-14.5h32.2v14.5H0Z"/><path fill="#3EAB4C" d="M360.3 49.7c-4.2 17-26.9 25.7-26.9 25.7l-.6.1h.2s24.6.9 31.4-22c3.3-11.8.4-23.6.4-23.6-9.8 2.1-17.7 6.3-24.6 17.8-7 11.5-3.9 20.8-3.9 20.8 18.8-8.8 18.8-20 18.8-20-8 11.8-16.2 13-16.2 13 4.1-24.4 22.6-26.7 22.6-26.7.3 5.4-.1 10.1-1 14.1 0 .3-.1.6-.2.8Z"/></svg>
+          </div>
+          <nav class="astro-HPNW4VWY">
+            <ul class="flex flex-col astro-HPNW4VWY">
+              <li class="astro-HPNW4VWY">
+                    <a class="block py-4 text-center text-xl astro-HPNW4VWY" href="#cloud-erp" title="{title}">
+                      Cloud ERP
+                    </a>
+                  </li><li class="astro-HPNW4VWY">
+                    <a class="block py-4 text-center text-xl astro-HPNW4VWY" href="#features" title="{title}">
+                      Features
+                    </a>
+                  </li><li class="astro-HPNW4VWY">
+                    <a class="block py-4 text-center text-xl astro-HPNW4VWY" href="#ecosystem" title="{title}">
+                      Ecosystem
+                    </a>
+                  </li><li class="astro-HPNW4VWY">
+                    <a class="block py-4 text-center text-xl astro-HPNW4VWY" href="#contact" title="{title}">
+                      Contact Us
+                    </a>
+                  </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+
+
+<noscript>
+  <style>
+    #open-nav-button {
+      display: none;
+    }
+  </style>
+</noscript>
+    <section class="relative h-full bg-black astro-3EGMGWTG">
+  <div id="starfield" class="absolute inset-0">
+  <canvas id="starfield-canvas"></canvas>
+</div>
+  <div id="splash-bg-fallback" class="absolute inset-0 hidden opacity-40 astro-3EGMGWTG">
+    <picture>
+	<source type="image/avif" srcset="astro/moon.e37745fc_Z1yMVJY.avif 450w,astro/moon.e37745fc_Z1DFhPq.avif 800w,astro/moon.e37745fc_yW6JM.avif 1200w" sizes="100vw"><source type="image/webp" srcset="astro/moon.e37745fc_ZLGAIe.webp 450w,astro/moon.e37745fc_ZQyVNF.webp 800w,astro/moon.e37745fc_1m3rLx.webp 1200w" sizes="100vw"><source type="image/jpeg" srcset="astro/moon.e37745fc_Z148XWe.jpg 450w,astro/moon.e37745fc_1dLTv3.jpg 800w,astro/moon.e37745fc_ZaSIDl.jpg 1200w" sizes="100vw">
+	<img alt="The ridged surface of the moon" src="astro/moon.e37745fc_ZaSIDl.jpg" loading="lazy" decoding="async" class="h-full w-full object-cover">
+</picture>
+  </div>
+  <div class="relative grid h-full place-items-center sm:auto-cols-auto sm:grid-flow-col astro-3EGMGWTG">
+    <h1 class="bg-gradient-to-r from-neutral-200 to-stone-200 bg-clip-text text-transparent text-center font-bold sm:font-extrabold tracking-tighter text-4xl mx-10 mt-24 mb-8 sm:m-0 sm:ml-40 sm:mt-10 sm:text-8xl self-end sm:self-center astro-3EGMGWTG">
+      Streamline your business operations and unleash new possibilities.
+    </h1>
+    <div id="astronaut" class="w-2/5 self-start sm:justify-self-start sm:self-center sm:w-8/12 sm:mr-20 astro-3EGMGWTG">
+      <picture>
+	<source type="image/avif" srcset="astro/astronaut.5d287107_Z1YiwF0.avif 450w,astro/astronaut.5d287107_ZE1lPG.avif 800w" sizes="(min-width: 640px) 42vw, 67vw"><source type="image/webp" srcset="astro/astronaut.5d287107_Z1ccbDf.webp 450w,astro/astronaut.5d287107_84Yb4.webp 800w" sizes="(min-width: 640px) 42vw, 67vw"><source type="image/png" srcset="astro/astronaut.5d287107_Z19Amw1.png 450w,astro/astronaut.5d287107_Z1AYAN0.png 800w" sizes="(min-width: 640px) 42vw, 67vw">
+	<img alt="A floating astronaut in a space suit" src="astro/astronaut.5d287107_Z1AYAN0.png" loading="eager" decoding="async" class="h-full w-full object-cover astro-3EGMGWTG">
+</picture>
+    </div>
+  </div>
+</section>
+
+<noscript>
+  <style>
+    #splash-bg-fallback {
+      display: block;
+    }
+  </style>
+</noscript>
+    <div class="space-y-24 px-8 py-32">
+      <section id="cloud-erp" class="flex scroll-mt-24  flex-col items-center gap-4 space-y-8">
+  <div class="flex flex-col items-center gap-4 max-w-6xl">
+    <svg viewBox="0 0 8.778 12.066" slot="eyebrow" class="h-32 pb-10" astro-icon="lo-icon"><path fill="#3eab4c" d="M7.276 5.239c-1.111 4.498-7.117 6.8-7.117 6.8L0 12.065h.053s6.509.238 8.308-5.82C9.234 3.121 8.467 0 8.467 0c-2.593.556-4.683 1.667-6.51 4.71C.107 7.752.927 10.213.927 10.213 5.9 7.885 5.9 4.92 5.9 4.92c-2.116 3.122-4.286 3.44-4.286 3.44 1.085-6.456 5.98-7.065 5.98-7.065.079 1.43-.027 2.673-.265 3.731 0 .08-.026.159-.053.212z" class="st3"/></svg>
+    <h2 class="text-center font-semibold text-3xl">
+      An Intuitive Cloud ERP
+    </h2>
+  </div>
+  <p class="max-w-6xl text-center sm:text-left text-lg">
+    
+    Revolutionize your logistics and supply chain management with our intuitive
+    Cloud ERP system. Embrace the highest-rated customer satisfaction in the
+    industry and unlock best-in-class solutions tailored to optimize your
+    operations. Seamlessly manage your logistics and supply chain, ensuring
+    efficiency and growth for your company.
+  
+  </p>
+  
+</section>
+      <section id="features" class="flex scroll-mt-24  flex-col items-center gap-4 space-y-8">
+  <div class="flex flex-col items-center gap-4 max-w-6xl">
+    
+    <h2 class="text-center font-semibold text-3xl">
+      Key Features at a Glance
+    </h2>
+  </div>
+  <p class="max-w-6xl text-center sm:text-left text-lg">
+    
+    Efficiently monitor the flow of goods and supplies throughout your
+    organization's supply chain with our advanced tracking system. Experience
+    real-time inventory management, seamless warehousing operations, and
+    optimized transportation and logistics. Our solution empowers your supply
+    chain with increased visibility and resilience, ensuring smoother operations
+    and enhanced performance.
+  
+  </p>
+  
+  
+  <div class="grid max-w-6xl gap-14">
+    <div class="items-center md:grid md:grid-cols-12 md:gap-6 border border-default bg-offset p-6 sm:p-12">
+          <div class="mx-auto mb-8 max-w-xl md:col-span-5 md:mb-0 md:w-full md:max-w-none lg:col-span-5 md:order-1">
+            <picture>
+	<source type="image/avif" srcset="astro/inventory.1d0bf627_ZnCaxf.avif 450w,astro/inventory.1d0bf627_2oSrnQ.avif 800w" sizes="(min-width: 640px) 42vw, 67vw"><source type="image/webp" srcset="astro/inventory.1d0bf627_otatv.webp 450w,astro/inventory.1d0bf627_Z1Sclok.webp 800w" sizes="(min-width: 640px) 42vw, 67vw"><source type="image/png" srcset="astro/inventory.1d0bf627_Z25tvnI.png 450w,astro/inventory.1d0bf627_1La1Ws.png 800w" sizes="(min-width: 640px) 42vw, 67vw">
+	<img alt="Inventory" src="astro/inventory.1d0bf627_1La1Ws.png" loading="eager" decoding="async" class="h-full w-full object-cover">
+</picture>
+          </div>
+          <div class="mx-auto max-w-xl md:col-span-7 md:w-full md:max-w-none lg:col-span-7 text-center sm:text-left">
+            <div class="md:pr-4 lg:pr-12 xl:pr-16">
+              <h3 class="mb-2 text-2xl">Inventory</h3>
+              <div class="mb-3 text-offset text-sm">
+                Mastering Your Inventory, Elevating Your Supply Chain
+              </div>
+              <p class="mb-4">Streamline your inventory operations with precision and ease, ensuring faster fulfillment, enhanced customer service, and reduced costs. Our supply chain software equips you with the necessary tools to track and manage inventory seamlessly, optimizing material flow across inbound and outbound logistics.</p>
+            </div>
+          </div>
+          <ul class="max-w-xl md:col-span-12 md:mb-0 md:w-full md:max-w-none lg:col-span-12 md:order-3">
+                <li class="mb-2 last:mb-0 flex items-start">
+                    <svg class="mr-2 mt-2.5 h-3 w-3 shrink-0 fill-current text-green-500" viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M10.28 2.28L3.989 8.575 1.695 6.28A1 1 0 00.28 7.695l3 3a1 1 0 001.414 0l7-7A1 1 0 0010.28 2.28z"></path>
+                    </svg>
+                    <span>Effortlessly post goods receipts and goods issues for inbound and outbound deliveries.</span>
+                  </li><li class="mb-2 last:mb-0 flex items-start">
+                    <svg class="mr-2 mt-2.5 h-3 w-3 shrink-0 fill-current text-green-500" viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M10.28 2.28L3.989 8.575 1.695 6.28A1 1 0 00.28 7.695l3 3a1 1 0 001.414 0l7-7A1 1 0 0010.28 2.28z"></path>
+                    </svg>
+                    <span>Leverage bar code and RFID technology for just-in-time availability and proof of delivery.</span>
+                  </li><li class="mb-2 last:mb-0 flex items-start">
+                    <svg class="mr-2 mt-2.5 h-3 w-3 shrink-0 fill-current text-green-500" viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M10.28 2.28L3.989 8.575 1.695 6.28A1 1 0 00.28 7.695l3 3a1 1 0 001.414 0l7-7A1 1 0 0010.28 2.28z"></path>
+                    </svg>
+                    <span>Utilize predictive analytics to forecast delivery dates for stock transport orders.</span>
+                  </li><li class="mb-2 last:mb-0 flex items-start">
+                    <svg class="mr-2 mt-2.5 h-3 w-3 shrink-0 fill-current text-green-500" viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M10.28 2.28L3.989 8.575 1.695 6.28A1 1 0 00.28 7.695l3 3a1 1 0 001.414 0l7-7A1 1 0 0010.28 2.28z"></path>
+                    </svg>
+                    <span>Monitor inventory operations in real-time with granular visibility at all levels</span>
+                  </li><li class="mb-2 last:mb-0 flex items-start">
+                    <svg class="mr-2 mt-2.5 h-3 w-3 shrink-0 fill-current text-green-500" viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M10.28 2.28L3.989 8.575 1.695 6.28A1 1 0 00.28 7.695l3 3a1 1 0 001.414 0l7-7A1 1 0 0010.28 2.28z"></path>
+                    </svg>
+                    <span>Ensure accuracy by regularly aligning physical stock levels with system stock levels</span>
+                  </li>
+              </ul>
+        </div><div class="items-center md:grid md:grid-cols-12 md:gap-6 border border-default bg-offset p-6 sm:p-12">
+          <div class="mx-auto mb-8 max-w-xl md:col-span-5 md:mb-0 md:w-full md:max-w-none lg:col-span-5 ">
+            <picture>
+	<source type="image/avif" srcset="astro/warehouse.7fb2ea56_1GF9SI.avif 450w,astro/warehouse.7fb2ea56_ZrMhef.avif 800w" sizes="(min-width: 640px) 42vw, 67vw"><source type="image/webp" srcset="astro/warehouse.7fb2ea56_2tLuUt.webp 450w,astro/warehouse.7fb2ea56_kj3Mv.webp 800w" sizes="(min-width: 640px) 42vw, 67vw"><source type="image/png" srcset="astro/warehouse.7fb2ea56_Z12kEOz.png 450w,astro/warehouse.7fb2ea56_Z1gzJUn.png 800w" sizes="(min-width: 640px) 42vw, 67vw">
+	<img alt="Warehouse" src="astro/warehouse.7fb2ea56_Z1gzJUn.png" loading="eager" decoding="async" class="h-full w-full object-cover">
+</picture>
+          </div>
+          <div class="mx-auto max-w-xl md:col-span-7 md:w-full md:max-w-none lg:col-span-7 text-center sm:text-left">
+            <div class="md:pl-4 lg:pl-12 xl:pl-16">
+              <h3 class="mb-2 text-2xl">Warehouse</h3>
+              <div class="mb-3 text-offset text-sm">
+                Maximize Efficiency, Deliver Excellence
+              </div>
+              <p class="mb-4">Experience unparalleled warehouse management with Supply Chain Master. Our software empowers you to store and handle goods with utmost efficiency, improving asset utilization, throughput, and on-time order fulfillment. Automate warehouse operations and integrate pick, pack, and ship activities seamlessly.</p>
+            </div>
+          </div>
+          <ul class="max-w-xl md:col-span-12 md:mb-0 md:w-full md:max-w-none lg:col-span-12 md:order-3">
+                <li class="mb-2 last:mb-0 flex items-start">
+                    <svg class="mr-2 mt-2.5 h-3 w-3 shrink-0 fill-current text-green-500" viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M10.28 2.28L3.989 8.575 1.695 6.28A1 1 0 00.28 7.695l3 3a1 1 0 001.414 0l7-7A1 1 0 0010.28 2.28z"></path>
+                    </svg>
+                    <span>Manage warehouse operations with granular visibility down to the storage bin level.</span>
+                  </li><li class="mb-2 last:mb-0 flex items-start">
+                    <svg class="mr-2 mt-2.5 h-3 w-3 shrink-0 fill-current text-green-500" viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M10.28 2.28L3.989 8.575 1.695 6.28A1 1 0 00.28 7.695l3 3a1 1 0 001.414 0l7-7A1 1 0 0010.28 2.28z"></path>
+                    </svg>
+                    <span>Leverage embedded analytics to expedite fulfillment and prevent stock-outs.</span>
+                  </li><li class="mb-2 last:mb-0 flex items-start">
+                    <svg class="mr-2 mt-2.5 h-3 w-3 shrink-0 fill-current text-green-500" viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M10.28 2.28L3.989 8.575 1.695 6.28A1 1 0 00.28 7.695l3 3a1 1 0 001.414 0l7-7A1 1 0 0010.28 2.28z"></path>
+                    </svg>
+                    <span>Improve environmental safety and compliance with product tracking checks.</span>
+                  </li><li class="mb-2 last:mb-0 flex items-start">
+                    <svg class="mr-2 mt-2.5 h-3 w-3 shrink-0 fill-current text-green-500" viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M10.28 2.28L3.989 8.575 1.695 6.28A1 1 0 00.28 7.695l3 3a1 1 0 001.414 0l7-7A1 1 0 0010.28 2.28z"></path>
+                    </svg>
+                    <span>Reduce revenue loss by enhancing warehouse inventory accuracy and transparency.</span>
+                  </li><li class="mb-2 last:mb-0 flex items-start">
+                    <svg class="mr-2 mt-2.5 h-3 w-3 shrink-0 fill-current text-green-500" viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M10.28 2.28L3.989 8.575 1.695 6.28A1 1 0 00.28 7.695l3 3a1 1 0 001.414 0l7-7A1 1 0 0010.28 2.28z"></path>
+                    </svg>
+                    <span>Benefit from features such as cross-docking, workforce management, slotting, and equipment automation.</span>
+                  </li>
+              </ul>
+        </div><div class="items-center md:grid md:grid-cols-12 md:gap-6 border border-default bg-offset p-6 sm:p-12">
+          <div class="mx-auto mb-8 max-w-xl md:col-span-5 md:mb-0 md:w-full md:max-w-none lg:col-span-5 md:order-1">
+            <picture>
+	<source type="image/avif" srcset="astro/transportation.99fa9b52_Z17LY4w.avif 450w,astro/transportation.99fa9b52_aSAH7.avif 800w" sizes="(min-width: 640px) 42vw, 67vw"><source type="image/webp" srcset="astro/transportation.99fa9b52_ZkFD2L.webp 450w,astro/transportation.99fa9b52_WYVIR.webp 800w" sizes="(min-width: 640px) 42vw, 67vw"><source type="image/png" srcset="astro/transportation.99fa9b52_Z1LUAlx.png 450w,astro/transportation.99fa9b52_ZAj3Gb.png 800w" sizes="(min-width: 640px) 42vw, 67vw">
+	<img alt="Delivery &#38; Transportation" src="astro/transportation.99fa9b52_ZAj3Gb.png" loading="eager" decoding="async" class="h-full w-full object-cover">
+</picture>
+          </div>
+          <div class="mx-auto max-w-xl md:col-span-7 md:w-full md:max-w-none lg:col-span-7 text-center sm:text-left">
+            <div class="md:pr-4 lg:pr-12 xl:pr-16">
+              <h3 class="mb-2 text-2xl">Delivery &amp; Transportation</h3>
+              <div class="mb-3 text-offset text-sm">
+                Deliver Excellence, Every Mile of the Way
+              </div>
+              <p class="mb-4">Unlock the power of LogisticsPro to streamline your delivery and transportation management. From logistics to delivery and transportation capabilities, our ERP system empowers you to ship products precisely, orchestrating seamless processes for inbound and outbound demands. Elevate your transportation planning and enhance perfect order rates for unmatched efficiency.</p>
+            </div>
+          </div>
+          <ul class="max-w-xl md:col-span-12 md:mb-0 md:w-full md:max-w-none lg:col-span-12 md:order-3">
+                <li class="mb-2 last:mb-0 flex items-start">
+                    <svg class="mr-2 mt-2.5 h-3 w-3 shrink-0 fill-current text-green-500" viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M10.28 2.28L3.989 8.575 1.695 6.28A1 1 0 00.28 7.695l3 3a1 1 0 001.414 0l7-7A1 1 0 0010.28 2.28z"></path>
+                    </svg>
+                    <span>Efficiently manage agency billing and subcontracting, simplifying financial processes.</span>
+                  </li><li class="mb-2 last:mb-0 flex items-start">
+                    <svg class="mr-2 mt-2.5 h-3 w-3 shrink-0 fill-current text-green-500" viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M10.28 2.28L3.989 8.575 1.695 6.28A1 1 0 00.28 7.695l3 3a1 1 0 001.414 0l7-7A1 1 0 0010.28 2.28z"></path>
+                    </svg>
+                    <span>Plan, tender, and settle freight with ease, optimizing transportation logistics.</span>
+                  </li><li class="mb-2 last:mb-0 flex items-start">
+                    <svg class="mr-2 mt-2.5 h-3 w-3 shrink-0 fill-current text-green-500" viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M10.28 2.28L3.989 8.575 1.695 6.28A1 1 0 00.28 7.695l3 3a1 1 0 001.414 0l7-7A1 1 0 0010.28 2.28z"></path>
+                    </svg>
+                    <span>Easily book carriers and manage forwarding orders for smooth transportation operations.</span>
+                  </li><li class="mb-2 last:mb-0 flex items-start">
+                    <svg class="mr-2 mt-2.5 h-3 w-3 shrink-0 fill-current text-green-500" viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M10.28 2.28L3.989 8.575 1.695 6.28A1 1 0 00.28 7.695l3 3a1 1 0 001.414 0l7-7A1 1 0 0010.28 2.28z"></path>
+                    </svg>
+                    <span>Define freight agreements with complex calculation rules and precise costing.</span>
+                  </li><li class="mb-2 last:mb-0 flex items-start">
+                    <svg class="mr-2 mt-2.5 h-3 w-3 shrink-0 fill-current text-green-500" viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M10.28 2.28L3.989 8.575 1.695 6.28A1 1 0 00.28 7.695l3 3a1 1 0 001.414 0l7-7A1 1 0 0010.28 2.28z"></path>
+                    </svg>
+                    <span>Ensure adherence to international trade and hazardous goods requirements for secure shipments.</span>
+                  </li>
+              </ul>
+        </div>
+  </div>
+
+</section>
+      <section id="ecosystem" class="flex scroll-mt-24  flex-col items-center gap-4 space-y-8">
+  <div class="flex flex-col items-center gap-4 max-w-6xl">
+    
+    <h2 class="text-center font-semibold text-3xl">
+      Empowering Your Ecosystem
+    </h2>
+  </div>
+  <p class="max-w-6xl text-center sm:text-left text-lg">
+    
+    Our cutting-edge system boasts remarkable compatibility with various
+    platforms, ensuring effortless integration with your existing software
+    ecosystem. Built on a cloud-based infrastructure, this solution eliminates
+    the need for expensive hardware investments, enabling you to optimize
+    resources and drive cost efficiencies.
+    <br><br>
+    With a user-friendly interface and cloud-based architecture, our platform seamlessly
+    connects with your current software, streamlining workflows, and maximizing productivity.
+    Say goodbye to compatibility issues and welcome a harmonious software environment
+    that propels your business forward without breaking the bank on costly hardware
+    investments.
+  
+  </p>
+  
+</section>
+      <section id="contact" class="flex scroll-mt-24  flex-col items-center gap-4 space-y-8">
+  <div class="flex flex-col items-center gap-4 max-w-6xl">
+    
+    <h2 class="text-center font-semibold text-3xl">
+      Get in Touch
+    </h2>
+  </div>
+  <p class="max-w-6xl text-center sm:text-left text-lg">
+    
+    We eagerly await the opportunity to connect with you. Whether you have a
+    question, need assistance, or wish to explore potential collaborations, our
+    team of dedicated professionals is here to spark a seamless conversation
+    that aligns perfectly with your needs.
+    <br><br>
+    Feel free to drop us a line at <a class="font-bold" href="mailto:info@inntrilabs.com">info@inntrilabs.com</a>. We value every interaction and are committed to providing you with the
+    utmost support. Let's start a dialogue and embark on a journey together to
+    shape your vision into reality. Contact us now, and let the sparks of
+    innovation ignite!
+  
+  </p>
+  
+</section>
+    </div>
+    <footer class="md:flex md:items-center md:justify-between py-10 items-center justify-center bg-footer px-8 text-gray-300">
+  <!-- <div class="absolute inset-0 overflow-hidden opacity-40">
+    <HeroImage />
+  </div> -->
+  <ul class="grid order-1 grid-cols-4 gap-4 mb-6 md:mb-0">
+    <li>
+          <a class="flex h-16 w-16 items-center justify-center rounded-full border-2 border-current p-4 active:outline-none active:border-none" href="#" title="Inntri Labs's official website">
+            <span class="sr-only">Inntri Labs&#39;s official website</span>
+            <svg viewBox="0 0 24 24" class="h-full" astro-icon="mdi:home"><path fill="currentColor" d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8h5z"/></svg>
+          </a>
+        </li><li>
+          <a class="flex h-16 w-16 items-center justify-center rounded-full border-2 border-current p-4 active:outline-none active:border-none" href="#" title="View source on GitHub">
+            <span class="sr-only">View source on GitHub</span>
+            <svg viewBox="0 0 480 512" class="h-full" astro-icon="fa-brands:github-alt"><path fill="currentColor" d="M186.1 328.7c0 20.9-10.9 55.1-36.7 55.1s-36.7-34.2-36.7-55.1 10.9-55.1 36.7-55.1 36.7 34.2 36.7 55.1zM480 278.2c0 31.9-3.2 65.7-17.5 95-37.9 76.6-142.1 74.8-216.7 74.8-75.8 0-186.2 2.7-225.6-74.8-14.6-29-20.2-63.1-20.2-95 0-41.9 13.9-81.5 41.5-113.6-5.2-15.8-7.7-32.4-7.7-48.8 0-21.5 4.9-32.3 14.6-51.8 45.3 0 74.3 9 108.8 36 29-6.9 58.8-10 88.7-10 27 0 54.2 2.9 80.4 9.2 34-26.7 63-35.2 107.8-35.2 9.8 19.5 14.6 30.3 14.6 51.8 0 16.4-2.6 32.7-7.7 48.2 27.5 32.4 39 72.3 39 114.2zm-64.3 50.5c0-43.9-26.7-82.6-73.5-82.6-18.9 0-37 3.4-56 6-14.9 2.3-29.8 3.2-45.1 3.2-15.2 0-30.1-.9-45.1-3.2-18.7-2.6-37-6-56-6-46.8 0-73.5 38.7-73.5 82.6 0 87.8 80.4 101.3 150.4 101.3h48.2c70.3 0 150.6-13.4 150.6-101.3zm-82.6-55.1c-25.8 0-36.7 34.2-36.7 55.1s10.9 55.1 36.7 55.1 36.7-34.2 36.7-55.1-10.9-55.1-36.7-55.1z"/></svg>
+          </a>
+        </li><li>
+          <a class="flex h-16 w-16 items-center justify-center rounded-full border-2 border-current p-4 active:outline-none active:border-none" href="#" title="Inntri Labs on Discord">
+            <span class="sr-only">Inntri Labs on Discord</span>
+            <svg viewBox="0 0 512 512" class="h-full" astro-icon="fa-brands:facebook"><path fill="currentColor" d="M504 256C504 119 393 8 256 8S8 119 8 256c0 123.78 90.69 226.38 209.25 245V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.28c-30.8 0-40.41 19.12-40.41 38.73V256h68.78l-11 71.69h-57.78V501C413.31 482.38 504 379.78 504 256z"/></svg>
+          </a>
+        </li><li>
+          <a class="flex h-16 w-16 items-center justify-center rounded-full border-2 border-current p-4 active:outline-none active:border-none" href="#" title="Inntri Labs on Twitter">
+            <span class="sr-only">Inntri Labs on Twitter</span>
+            <svg viewBox="0 0 512 512" class="h-full" astro-icon="fa-brands:twitter"><path fill="currentColor" d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/></svg>
+          </a>
+        </li>
+  </ul>
+  <div class="items-center justify-center text-center">&copy; Inntri Labs. All rights reserved.</div>
+</footer>
+  </body></html>
